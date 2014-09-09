@@ -1,0 +1,36 @@
+if starting then
+   var.calibrationGyro = [0, 0] 
+   var.deadzoneGyro = [5, 5]
+   var.sensitivityGyro = [0.25, 0.25] 
+   Mouse.DirectInputX=0
+    Mouse.DirectInputY=0
+    var.Gyro = [0, 0]
+endif
+
+//Use A to move the cursor, change the values to your preference
+ if(WiiMote.A)
+ var.Gyro[1] = (WiiMote.MotionPlus.YawSpeed*var.sensitivityGyro[1] )
+  var.Gyro[2]= (WiiMote.MotionPlus.PitchSpeed*var.sensitivityGyro[2])
+   Mouse.DirectInputX = Mouse.DirectInputX + deadzone(var.Gyro[1])
+   Mouse.DirectInputY = Mouse.DirectInputY - deadzone(var.Gyro[2])
+   endif
+//Map the keys according to your preference
+Key.W = Nunchuk.Up
+Key.A = Nunchuk.Left
+Key.S = Nunchuk1.Down
+Key.D = Nunchuk.Right
+Key.Space = Wiimote.One
+Key.LeftShift = Nunchuk.C
+Key.R = Wiimote.Minus
+Mouse.LeftButton = Wiimote.B
+Mouse.RightButton = Nunchuk.Z
+Key.T = Wiimote.One
+Key.E = Wiimote.Two
+Key.U = Wiimote.Up
+Key.J = Wiimote.Down
+Key.Q = Wiimote.Right
+Key.M = Wiimote.Left
+Key.Space = Wiimote.Home
+Key.c=Wiimote.Plus
+Key.F=Nunchuk.UpsideDownOnShoulder
+
