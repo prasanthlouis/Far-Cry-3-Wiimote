@@ -4,6 +4,7 @@ Far-Cry-3-Wiimote
 Script for glovepie to play Far Cry 3 with the Wiimote
 
 Steps:
+
 1) Download the glovepie software 
 
 2) Hit the 1 and 2 button on your wii remote to make it discoverable
